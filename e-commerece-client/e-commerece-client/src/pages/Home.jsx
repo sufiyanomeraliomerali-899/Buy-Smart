@@ -9,8 +9,12 @@ export default function Home({ search, sort }) {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await Api.get("/products");
-      setProducts(data);
+      try {
+        const { data } = await Api.get("/products");
+        setProducts(data);
+      } catch (error) {
+        console.error("Failed to load products:", error);
+      }
     };
 
     fetchProducts();

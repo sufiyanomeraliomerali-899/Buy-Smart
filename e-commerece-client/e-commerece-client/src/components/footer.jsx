@@ -7,10 +7,10 @@ const Footer = () => {
       <h3>Buy Smart</h3>
       <p>© 2026 All rights reserved</p>
 
-      <diiv>
+      <div>
         <a href="#">Contact</a>
         <a href="#">Help</a>
-      </diiv>
+      </div>
     </div>
   );
 };
