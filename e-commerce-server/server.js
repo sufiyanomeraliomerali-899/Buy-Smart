@@ -23,7 +23,7 @@ App.get("/", (req, res) => {
 App.use("/api/auth", authRoutes);
 App.use("/api/test", testRoute);
 App.use("/api/products", productRoute);
-App.use("/uploads", express.static("uploads"));
+App.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
 const PORT = process.env.PORT || 5000;
 
