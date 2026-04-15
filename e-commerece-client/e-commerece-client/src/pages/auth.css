@@ -49,3 +49,9 @@
   color: blue;
   text-decoration: none;
 }
+
+@media (max-width: 600px) {
+  .auth-form {
+    width: 90%;
+  }
+}

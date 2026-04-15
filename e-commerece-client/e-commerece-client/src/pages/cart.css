@@ -56,3 +56,14 @@
   text-align: right;
   margin-top: 20px;
 }
+
+@media (max-width: 600px) {
+  .cart > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart button {
+    margin-top: 5px;
+  }
+}
