@@ -11,7 +11,6 @@ export default function Home({ search, sort }) {
     const fetchProducts = async () => {
       try {
         const res = await Api.get("/products");
-        console.log(res.data);
 
         setProducts(Array.isArray(res.data) ? res.data : []);
       } catch (error) {
