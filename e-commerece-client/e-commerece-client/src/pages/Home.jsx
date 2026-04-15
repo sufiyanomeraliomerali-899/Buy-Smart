@@ -10,8 +10,10 @@ export default function Home({ search, sort }) {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await Api.get("/products");
-        setProducts(data);
+        const res = await Api.get("/products");
+        console.log(res.data);
+
+        setProducts(Array.isArray(res.data) ? res.data : []);
       } catch (error) {
         console.error("Failed to load products:", error);
       }
