@@ -14,7 +14,11 @@ const ProductCart = ({ product }) => {
 
   return (
     <div className="card">
-      <img src={product.image} alt={product.name} className="product-img" />
+      <img
+        src={`https://buy-smart-xtbs.onrender.com/${product.image}`}
+        alt={product.name}
+        className="product-img"
+      />
       <h3 onClick={() => navigate(`/products/${product._id}`)}>
         Name : {product.name}
       </h3>
