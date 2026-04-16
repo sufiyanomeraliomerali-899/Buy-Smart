@@ -11,13 +11,13 @@ export const createProduct = async (req, res) => {
     return res.json(products);
   }
 
-  const { name, price, description, image } = req.body;
+  const { name, price, description } = req.body;
 
   const product = await Product.create({
-    image: req.file ? `uploads/${req.file.filename}` : "",
     name,
     price,
     description,
+    image: req.file ? `uploads/${req.file.filename}` : "",
     user: req.user._id,
   });
 

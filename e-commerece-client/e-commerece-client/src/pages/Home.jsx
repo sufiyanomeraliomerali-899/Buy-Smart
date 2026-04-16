@@ -12,7 +12,9 @@ export default function Home({ search, sort }) {
       try {
         const res = await Api.get("/products");
 
-        setProducts(Array.isArray(res.data) ? res.data : []);
+        setProducts(
+          Array.isArray(res.data) ? res.data : res.data.products || [],
+        );
       } catch (error) {
         console.error("Failed to load products:", error);
       }

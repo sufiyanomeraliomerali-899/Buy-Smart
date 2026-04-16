@@ -5,10 +5,11 @@ import {
   getProducts,
   getSingleProduct,
 } from "../controllers/productController.js";
+import upload from "../uploads";
 
 const router = express.Router();
 
-router.post("/", protect, createProduct);
+router.post("/", protect, upload.single(image), createProduct);
 router.get("/", getProducts);
 router.get("/:id", getSingleProduct);
 
