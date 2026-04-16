@@ -25,7 +25,11 @@ export default function ProductDetails() {
 
   return (
     <div className="details">
-      <img src={product.image} alt={product.name} className="product-img" />
+      <img
+        src={`https://buy-smart-52yy.onrender.com/${product.image}`}
+        alt={product.name}
+        className="product-img"
+      />
       <h2>Name: {product.name}</h2>
       <p>Price: {product.price}</p>
       <p>Description: {product.description}</p>

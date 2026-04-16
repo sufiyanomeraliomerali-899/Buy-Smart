@@ -14,7 +14,7 @@ export const createProduct = async (req, res) => {
   const { name, price, description, image } = req.body;
 
   const product = await Product.create({
-    image,
+    image: req.file ? `uploads/${req.file.filename}` : "",
     name,
     price,
     description,

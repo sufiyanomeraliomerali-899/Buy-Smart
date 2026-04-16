@@ -11,11 +11,12 @@ const ProductCart = ({ product }) => {
     console.log("Adding product:", product);
     addToCart(product);
   };
+  console.log(product);
 
   return (
     <div className="card">
       <img
-        src={`https://buy-smart-xtbs.onrender.com/${product.image}`}
+        src={`http://localhost:5000/uploads/${product.image}`}
         alt={product.name}
         className="product-img"
       />
