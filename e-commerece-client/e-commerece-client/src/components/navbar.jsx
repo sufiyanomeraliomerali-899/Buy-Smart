@@ -22,7 +22,20 @@ const Navbar = ({ setSearch, setSort }) => {
 
   return (
     <nav className="navbar">
-      <h2>Buy Smart</h2>
+      <div className="navSec1">
+        <h2>
+          <span className="buyText">Buy</span>{" "}
+          <span className="smartText">Smart</span>
+        </h2>
+
+        <div className="navLinks">
+          <Link to={"/"}>Home</Link>
+          <Link to={"/cart"}>Cart ({totalItems})</Link>
+          <button className="mobileLogout" onClick={logout}>
+            Logout
+          </button>
+        </div>
+      </div>
 
       <div className="navContainer">
         <div>
@@ -38,11 +51,6 @@ const Navbar = ({ setSearch, setSort }) => {
             <option value="low">Price low to high</option>
             <option value="high">Price high to low</option>
           </select>
-        </div>
-
-        <div>
-          <Link to={"/"}>Home</Link>
-          <Link to={"/cart"}>Cart ({totalItems})</Link>
         </div>
       </div>
 
