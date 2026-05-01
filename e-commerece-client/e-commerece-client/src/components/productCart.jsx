@@ -22,7 +22,7 @@ const ProductCart = ({ product }) => {
       <h3 onClick={() => navigate(`/products/${product._id}`)}>
         Name : {product.name}
       </h3>
-      <p>Price : ${product.price}</p>
+      <p>Price : ₹{product.price}</p>
 
       <button onClick={handleAdd}>Add To Cart</button>
     </div>
