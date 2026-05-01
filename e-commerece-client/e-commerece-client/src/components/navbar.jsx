@@ -54,7 +54,7 @@ const Navbar = ({ setSearch, setSort }) => {
         </div>
       </div>
 
-      <button onClick={logout}>Logout</button>
+      <button className="navLogoutBtn" onClick={logout}>Logout</button>
     </nav>
   );
 };
